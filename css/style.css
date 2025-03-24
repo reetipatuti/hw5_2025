@@ -1,0 +1,159 @@
+/* Apply animation to the logo */
+@keyframes animateLogo {
+    0% {
+        width: 25px;
+        opacity: 0;
+    }
+    100% {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation: animateLogo 5s ease forwards; /* Trigger animation */
+}
+
+/* Step 2
+Adding body styling with primary and backup font, along with background image and backup color */
+body{
+    font-family: "poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* Step 3
+Adding flex to header to style it as per the example */
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Step 4 
+Adding flex to navlinks to style it as per the example  */
+.nav_links{
+    display: flex;
+    flex-direction: column;
+
+}
+/* Step 5  
+styling visitng links to be of the same color*/
+a:link, a:visited {
+    color: #0110de; 
+}
+
+
+/* Step 6 
+styling cars as per instructions and to match the example  */
+
+.card > header{
+    background-color: #288088 ;
+    border: solid 2px #45ADAD;
+    padding: 20px 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+/* Step 7 and 8 
+7. Setting the base width of each card to 450px using flex. Cards adjust based on screen size and stack on mobile. Making sure cards are centered horizontally and vertically. */
+.card {
+    border-radius: 50px 50px 0 0;
+    flex: 1 1 450px;
+}
+.pricing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+/* Step 9 and 10
+Styling the images in the gallery class with a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.
+Using flex to match the example*/
+
+.gallery{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* Step 11 and 12
+Used flex propoerties to match the example. Shifted the logo to left and the links to the right.
+Also used flex-property to specify a “size” of 275px and made width same */
+
+@media only screen and (min-width: 900px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        position: sticky;
+    }
+
+.nav_links{
+    display: flex;
+    flex-flow: row wrap;
+}
+.card{
+    flex-basis: 275px;
+}
+
+body>header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+}
+
+
+@media all and (prefers-reduced-motion:reduced){
+    #logo{
+        animation: none; /* No animation for users who prefer reduced motion */
+        width: 475px;
+        opacity: 1;
+    }
+    }
+    
+    @media print {
+        body>header{
+            align-items: center;
+        }
+        .nav_links{
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        body{
+            font-family: Arial, Helvetica;
+            background-image: none;
+        }
+        .pricing{
+            align-items: flex-end;
+        }
+        .card{
+            border: 2px solid #45ADDD;
+            flex-basis: 325px;
+        }
+        #gallery, .gallery{
+            display: none;
+        }
+        .card ul li:nth-child(2)::after {
+            content: 'ðŸ‘';  /* Insert thumbs-up emoji */
+            margin-right: 8px;  /* Add space between emoji and text */
+            font-size: 1.2em;  /* Adjust size if needed */
+        }
+    }
+    
+    
+
+
+
