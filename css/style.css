@@ -148,7 +148,7 @@ body>header{
             display: none;
         }
         .card ul li:nth-child(2)::after {
-            content: 'ðŸ‘';  /* Insert thumbs-up emoji */
+            content: '\1F44D';  /* Insert thumbs-up emoji */
             margin-right: 8px;  /* Add space between emoji and text */
             font-size: 1.2em;  /* Adjust size if needed */
         }
