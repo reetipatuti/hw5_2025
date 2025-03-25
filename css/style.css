@@ -115,14 +115,15 @@ body>header{
 
 }
 
+/* No animation for users who prefer reduced motion */
 
-@media all and (prefers-reduced-motion:reduced){
+@media all and (prefers-reduced-motion: reduce) {
     #logo{
-        animation: none; /* No animation for users who prefer reduced motion */
+        animation: none; 
         width: 475px;
         opacity: 1;
     }
-    }
+}
     
     @media print {
         body>header{
