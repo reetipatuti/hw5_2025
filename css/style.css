@@ -124,7 +124,7 @@ body>header{
         opacity: 1;
     }
 }
-    
+
     @media print {
         body>header{
             align-items: center;
@@ -137,8 +137,11 @@ body>header{
             font-family: Arial, Helvetica;
             background-image: none;
         }
-        .pricing{
+        .pricing {
+            display: flex;
             align-items: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .card{
             border: 2px solid #45ADDD;
@@ -148,9 +151,9 @@ body>header{
             display: none;
         }
         .card ul li:nth-child(2)::after {
-            content: '\1F44D';  /* Insert thumbs-up emoji */
-            margin-right: 8px;  /* Add space between emoji and text */
-            font-size: 1.2em;  /* Adjust size if needed */
+            content: '👍';  /* Insert thumbs-up emoji */
+            margin-right: 8px;  
+            font-size: 1.2em;  
         }
     }
     
